@@ -1,0 +1,54 @@
+@import './variables';
+
+.layout {
+  font: {
+    weight: 500;
+    size: 24px;
+  }
+}
+
+.header {
+  padding: 40px 100px 50px 100px;
+  display: flex;
+  justify-content: space-between;
+
+  & nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+
+    & li:first-child {
+      margin-right: 57px;
+    }
+
+    & a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 74px;
+  padding-bottom: 29px;
+
+  background: black;
+  color: white;
+  text-align: center;
+
+  & p {
+    margin: 30px 0px 0px 0px;
+  }
+}
