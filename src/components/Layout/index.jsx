@@ -15,7 +15,7 @@ function Layout({ children }) {
                 className={(link) => (link.isActive ? styles.active : '')}
                 to="/"
               >
-                Accueil
+                A<span>ccueil</span>
               </NavLink>
             </li>
             <li>
@@ -23,7 +23,7 @@ function Layout({ children }) {
                 className={(link) => (link.isActive ? styles.active : '')}
                 to="/about"
               >
-                À propos
+                À <span>propos</span>
               </NavLink>
             </li>
           </ul>

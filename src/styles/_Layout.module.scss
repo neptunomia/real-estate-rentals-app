@@ -1,16 +1,53 @@
 @import './variables';
+@import './mixins';
 
 .layout {
   font: {
     weight: 500;
-    size: 24px;
+    size: 12px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 24px;
   }
 }
 
 .header {
-  padding: 40px 100px 50px 100px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
+
+  @include tablet {
+    padding: 30px 60px 30px 60px;
+  }
+
+  @include desktop {
+    padding: 40px 100px 50px 100px;
+  }
+
+  & img {
+    width: 145px;
+    height: auto;
+
+    @include mobile-s {
+      width: 80px;
+      height: auto;
+    }
+
+    @include tablet {
+      width: 180px;
+      height: auto;
+    }
+
+    @include desktop {
+      width: 210.32px;
+      height: auto;
+    }
+  }
 
   & nav {
     display: flex;
@@ -24,12 +61,28 @@
     list-style-type: none;
 
     & li:first-child {
-      margin-right: 57px;
+      margin-right: 10px;
+
+      @include tablet {
+        margin-right: 30px;
+      }
+
+      @include desktop {
+        margin-right: 57px;
+      }
     }
 
     & a {
       color: $primary-color;
       text-decoration: none;
+
+      & span {
+        text-transform: uppercase;
+
+        @include desktop {
+          text-transform: lowercase;
+        }
+      }
 
       &.active {
         text-decoration: underline;
@@ -41,12 +94,24 @@
 .footer {
   width: 100%;
   margin-top: 50px;
-  padding-top: 74px;
-  padding-bottom: 29px;
+  padding-top: 62px;
+  padding-bottom: 69px;
+
+  @include tablet {
+    padding-top: 74px;
+    padding-bottom: 29px;
+  }
 
   background: black;
   color: white;
   text-align: center;
+
+  & img {
+    @include mobile-s {
+      width: 80px;
+      height: auto;
+    }
+  }
 
   & p {
     margin: 30px 0px 0px 0px;
