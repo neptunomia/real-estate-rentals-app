@@ -1,5 +1,7 @@
+import Banner from '../../components/Banner/Banner';
+
 function About() {
-  return <div>Ceci est ma page à propos.</div>;
+  return <Banner page="about"></Banner>;
 }
 
 export default About;

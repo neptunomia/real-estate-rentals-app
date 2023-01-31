@@ -3,11 +3,9 @@ import Router from './Router';
 
 function App() {
   return (
-    <div>
-      <Layout>
-        <Router />
-      </Layout>
-    </div>
+    <Layout>
+      <Router />
+    </Layout>
   );
 }
 

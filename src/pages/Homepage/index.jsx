@@ -1,5 +1,7 @@
+import Banner from '../../components/Banner/Banner';
+
 function Homepage() {
-    return <div>Ceci est ma page d'accueil.</div>
+  return <Banner page="home"></Banner>;
 }
 
-export default Homepage
+export default Homepage;
