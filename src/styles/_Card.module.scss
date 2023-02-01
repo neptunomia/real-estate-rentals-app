@@ -1,0 +1,74 @@
+@import './variables';
+@import './mixins';
+
+@include tablet {
+  .container {
+    margin-top: 50px;
+    padding: 50px 0px 0px 0px;
+    border-radius: 25px;
+    background: $background-color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 255px;
+  border-radius: 10px;
+
+  @include tablet {
+    width: 40%;
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    width: 27.5%;
+    height: 340px;
+    margin-bottom: 50px;
+  }
+
+  &__imgContainer {
+    width: 100%;
+    height: 255px;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+
+    @include desktop {
+      height: 340px;
+    }
+
+    &__img {
+      position: relative;
+      z-index: -1;
+      width: 100%;
+      height: 255px;
+      object-fit: cover;
+      border-radius: 10px;
+
+      @include desktop {
+        height: 340px;
+      }
+    }
+  }
+
+  &__title {
+    width: 40%;
+    position: absolute;
+    left: 19px;
+    bottom: -5px;
+    font: {
+      weight: 500;
+      size: 18px;
+    }
+    color: white;
+  }
+}

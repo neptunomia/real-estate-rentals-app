@@ -1,5 +1,7 @@
 @import './variables';
 @import './mixins';
+//import banner from '../../assets/images/banner.jpg';
+//import bannerAbout from '../../assets/images/banner_about.jpg';
 
 .banner {
   display: flex;
@@ -19,6 +21,29 @@
 
   @include desktop {
     height: 223px;
+  }
+
+  &__home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+      url('../assets/images/banner_mobile.jpg');
+
+    @include tablet {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+        url('../assets/images/banner.jpg');
+    }
+  }
+
+  &__about {
+    height: 223px;
+    background-origin: border-box;
+    background-position: right;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+      url('../assets/images/banner_about_mobile.jpg');
+
+    @include tablet {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+        url('../assets/images/banner_about.jpg');
+    }
   }
 
   & h1 {
