@@ -1,0 +1,62 @@
+@import './variables';
+@import './mixins';
+
+.error {
+  padding: 200px 28px 200px 28px;
+  text-align: center;
+  font-weight: 500;
+  color: $primary-color;
+
+  @include tablet {
+    padding: 174px 0px 159px 0px;
+  }
+
+  & img {
+    width: 198px;
+    height: auto;
+
+    @include tablet {
+      width: 330px;
+    }
+
+    @include desktop {
+      width: 597px;
+    }
+  }
+
+  & h1 {
+    margin-top: 11px;
+    margin-bottom: 133px;
+    line-height: 26px;
+    font-size: 18px;
+
+    @include tablet {
+      margin-top: 66px;
+      margin-bottom: 182px;
+      font-size: 20px;
+    }
+
+    @include desktop {
+      font-size: 36px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1071px) {
+      font-size: 30px;
+    }
+
+    & br {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  & a {
+    font-size: 14px;
+    color: $primary-color;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+}
