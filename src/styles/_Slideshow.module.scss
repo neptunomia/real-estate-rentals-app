@@ -1,0 +1,70 @@
+@import './variables';
+@import './mixins';
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 255px;
+  border-radius: 10px;
+
+  @include tablet {
+    margin-top: 25px;
+    height: 415px;
+  }
+
+  &__slide {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    @include tablet {
+      height: 415px;
+    }
+  }
+
+  &__arrow {
+    width: 12px;
+    height: auto;
+
+    @include tablet {
+      width: 47px;
+    }
+  }
+
+  &__leftArrow {
+    position: absolute;
+    left: 6px;
+
+    @include tablet {
+      left: 23px;
+    }
+  }
+
+  &__rightArrow {
+    position: absolute;
+    right: 6px;
+
+    @include tablet {
+      right: 23px;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+
+    @include tablet {
+      font-size: 18px;
+      bottom: 25px;
+    }
+  }
+}

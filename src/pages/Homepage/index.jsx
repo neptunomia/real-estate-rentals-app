@@ -1,5 +1,5 @@
 import Banner from '../../components/Banner';
-import Card from '../../components/Card/Card';
+import Card from '../../components/Card';
 import rentalData from '../../utils/data/index.json';
 import styles from '../../styles/_Card.module.scss';
 
