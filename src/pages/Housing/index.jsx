@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Slideshow from '../../components/Slideshow';
 import datas from '../../utils/data/index.json';
 import Collapse from '../../components/Collapse';
@@ -11,26 +11,28 @@ function Housing() {
   const { id } = useParams();
   //console.log(id);
   const rentalData = datas.find((rental) => rental.id === id);
-  console.log(rentalData);
-  return (
+  //console.log(rentalData);
+  return rentalData ? (
     <div>
       <Slideshow pictures={rentalData} />
       <section className={styles.housing}>
-        <div>
-          <h1 className={styles.housing__title}>{rentalData.title}</h1>
-          <h2 className={styles.housing__subtitle}>{rentalData.location}</h2>
-          <div className={styles.tags}>
-            {rentalData.tags.map((tag) => (
-              <Tag tag={tag} />
-            ))}
+        <div className={styles.housing__container}>
+          <div>
+            <h1 className={styles.housing__title}>{rentalData.title}</h1>
+            <h2 className={styles.housing__subtitle}>{rentalData.location}</h2>
+            <div className={styles.tags}>
+              {rentalData.tags.map((tag, index) => (
+                <Tag key={`${tag}-${index}`} tag={tag} />
+              ))}
+            </div>
           </div>
-        </div>
-        <div>
-          <Rate />
-          <Profile
-            name={rentalData.host.name}
-            picture={rentalData.host.picture}
-          />
+          <div className={styles.containerRateProfile}>
+            <Rate rate={rentalData.rating} />
+            <Profile
+              name={rentalData.host.name}
+              picture={rentalData.host.picture}
+            />
+          </div>
         </div>
         <ul className={styles.rentalCollapses}>
           <Collapse
@@ -53,8 +55,9 @@ function Housing() {
         </ul>
       </section>
     </div>
+  ) : (
+    <Navigate to={'*'} />
   );
 }
-//liStyle, headerStyle, paragrapheStyle
 
 export default Housing;
