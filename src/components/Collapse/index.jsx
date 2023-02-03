@@ -7,8 +7,20 @@ function Collapse(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return isOpen ? (
-    <li className={styles.collapse__li}>
-      <div className={styles.collapse__li__header}>
+    <li
+      className={
+        props.page === 'housing'
+          ? `${styles.collapse__li} ${props.li}`
+          : `${styles.collapse__li}`
+      }
+    >
+      <div
+        className={
+          props.page === 'housing'
+            ? `${styles.collapse__li__header} ${props.header}`
+            : `${styles.collapse__li__header}`
+        }
+      >
         <span>{props.title}</span>
         <img
           id="arrow"
@@ -17,11 +29,31 @@ function Collapse(props) {
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>
-      <p>{props.description}</p>
+      <p
+        className={
+          props.page === 'housing'
+            ? `${styles.collapse__li__paragraph} ${props.equipments}`
+            : `${styles.collapse__li__paragraph}`
+        }
+      >
+        {props.description}
+      </p>
     </li>
   ) : (
-    <li className={styles.collapse__li}>
-      <div className={styles.collapse__li__header}>
+    <li
+      className={
+        props.page === 'housing'
+          ? `${styles.collapse__li} ${props.li}`
+          : `${styles.collapse__li}`
+      }
+    >
+      <div
+        className={
+          props.page === 'housing'
+            ? `${styles.collapse__li__header} ${props.header}`
+            : `${styles.collapse__li__header}`
+        }
+      >
         <span>{props.title}</span>
         <img
           id="arrow"

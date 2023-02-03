@@ -1,0 +1,56 @@
+@import './variables';
+@import './mixins';
+
+.rentalCollapses {
+  list-style-type: none;
+  padding-left: 0;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__li {
+    width: 47%;
+
+    & p {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      height: 143px;
+      padding: 23px 7px 2px 12px;
+      overflow: scroll;
+      @include tablet {
+        height: 170px;
+        padding: 40px 12px 53px 20px;
+        line-height: 26px;
+        font: {
+          weight: 400;
+          size: 18px;
+        }
+      }
+    }
+  }
+
+  &__header {
+    border-radius: 10px;
+    padding: 13px 19px 13px 20px;
+
+    @include tablet {
+      font: {
+        weight: 500;
+        size: 18px;
+      }
+    }
+
+    & img {
+      @include tablet {
+        width: 26px;
+        height: auto;
+      }
+    }
+  }
+
+  &__equipments {
+    display: flex;
+    flex-direction: column;
+  }
+}
