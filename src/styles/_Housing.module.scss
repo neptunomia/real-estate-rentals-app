@@ -1,6 +1,54 @@
 @import './variables';
 @import './mixins';
 
+.housing {
+  color: $primary-color;
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 0;
+    line-height: 26px;
+    font: {
+      weight: 500;
+      size: 18px;
+    }
+
+    @include mobile-s {
+      line-height: 20px;
+      font-size: 16px;
+    }
+
+    @include tablet {
+      width: 55%;
+      margin-top: 30px;
+      font-size: 24px;
+      line-height: 31px;
+    }
+
+    @include desktop {
+      font-size: 36px;
+      line-height: 51px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  @include mobile-s {
+    font-size: 12px;
+  }
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    font-size: 18px;
+  }
+}
+
 .rentalCollapses {
   list-style-type: none;
   padding-left: 0;
@@ -10,7 +58,9 @@
   }
 
   &__li {
-    width: 47%;
+    @include tablet {
+      width: 47%;
+    }
 
     & p {
       border-bottom-left-radius: 10px;
