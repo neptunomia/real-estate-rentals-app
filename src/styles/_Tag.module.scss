@@ -15,6 +15,11 @@
   }
 
   @include tablet {
+    padding: 3px 35px 3px 35px;
+    font-size: 12px;
+  }
+
+  @include desktop {
     padding: 3px 40px 3px 40px;
     font-size: 14px;
   }

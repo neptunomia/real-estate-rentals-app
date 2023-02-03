@@ -3,6 +3,15 @@
 
 .housing {
   color: $primary-color;
+
+  &__container {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
   &__title {
     margin-top: 15px;
     margin-bottom: 0;
@@ -18,9 +27,8 @@
     }
 
     @include tablet {
-      width: 55%;
       margin-top: 30px;
-      font-size: 24px;
+      font-size: 20px;
       line-height: 31px;
     }
 
@@ -51,14 +59,22 @@
 }
 
 .rentalCollapses {
+  margin-top: 25px;
+  margin-bottom: 0;
   list-style-type: none;
   padding-left: 0;
+
   @include tablet {
     display: flex;
     justify-content: space-between;
   }
 
+  @include desktop {
+    margin-top: 0;
+  }
+
   &__li {
+    margin-top: 0;
     @include tablet {
       width: 47%;
     }
@@ -68,7 +84,6 @@
       border-bottom-right-radius: 10px;
       height: 143px;
       padding: 23px 7px 2px 12px;
-      overflow: scroll;
       @include tablet {
         height: 170px;
         padding: 40px 12px 53px 20px;
@@ -86,6 +101,7 @@
     padding: 13px 19px 13px 20px;
 
     @include tablet {
+      margin-top: 0;
       font: {
         weight: 500;
         size: 18px;
@@ -112,4 +128,21 @@
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+}
+
+.containerRateProfile {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column-reverse;
+  }
 }
