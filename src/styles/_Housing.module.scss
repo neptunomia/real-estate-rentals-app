@@ -34,18 +34,19 @@
     margin-top: 5px;
     margin-bottom: 12px;
     font-size: 14px;
-  }
 
-  @include mobile-s {
-    font-size: 12px;
-  }
+    @include mobile-s {
+      font-size: 12px;
+    }
 
-  @include tablet {
-    margin-top: 20px;
-  }
+    @include tablet {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
 
-  @include desktop {
-    font-size: 18px;
+    @include desktop {
+      font-size: 18px;
+    }
   }
 }
 
@@ -103,4 +104,12 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
 }

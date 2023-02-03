@@ -1,0 +1,21 @@
+@import './variables';
+@import './mixins';
+
+.tag {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  padding: 2px 30px 2px 30px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  text-align: center;
+  color: white;
+  font: {
+    weight: 500;
+    size: 10px;
+  }
+
+  @include tablet {
+    padding: 3px 40px 3px 40px;
+    font-size: 14px;
+  }
+}

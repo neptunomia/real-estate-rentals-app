@@ -19,7 +19,11 @@ function Housing() {
         <div>
           <h1 className={styles.housing__title}>{rentalData.title}</h1>
           <h2 className={styles.housing__subtitle}>{rentalData.location}</h2>
-          <Tag />
+          <div className={styles.tags}>
+            {rentalData.tags.map((tag) => (
+              <Tag tag={tag} />
+            ))}
+          </div>
         </div>
         <div>
           <Rate />

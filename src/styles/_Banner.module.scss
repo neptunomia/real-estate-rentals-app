@@ -14,10 +14,12 @@
 
   @include tablet {
     justify-content: center;
+    margin-top: 45px;
     height: 180px;
   }
 
   @include desktop {
+    margin-top: 64px;
     height: 223px;
   }
 
