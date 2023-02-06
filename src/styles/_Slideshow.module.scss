@@ -31,6 +31,7 @@
   &__arrow {
     width: 12px;
     height: auto;
+    cursor: pointer;
 
     @include tablet {
       width: 47px;

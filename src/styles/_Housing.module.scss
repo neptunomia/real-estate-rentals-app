@@ -60,7 +60,7 @@
 
 .rentalCollapses {
   margin-top: 25px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   list-style-type: none;
   padding-left: 0;
 
@@ -75,6 +75,7 @@
 
   &__li {
     margin-top: 0;
+    margin-bottom: 20px;
     @include tablet {
       width: 47%;
     }
@@ -82,10 +83,10 @@
     & p {
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-      height: 143px;
+      //height: 143px;
       padding: 23px 7px 2px 12px;
       @include tablet {
-        height: 170px;
+        //height: 170px;
         padding: 40px 12px 53px 20px;
         line-height: 26px;
         font: {

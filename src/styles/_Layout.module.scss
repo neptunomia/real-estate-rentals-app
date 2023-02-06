@@ -8,14 +8,14 @@
   }
 
   &__padding {
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
 
     @include tablet {
-      padding: 30px 60px 30px 60px;
+      padding: 30px 60px 0px 60px;
     }
 
     @include desktop {
-      padding: 40px 100px 50px 100px;
+      padding: 40px 100px 0px 100px;
     }
   }
 
