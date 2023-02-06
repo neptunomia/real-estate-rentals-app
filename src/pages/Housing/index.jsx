@@ -34,12 +34,12 @@ function Housing() {
             />
           </div>
         </div>
-        <ul className={styles.rentalCollapses}>
+        <div className={styles.rentalCollapses}>
           <Collapse
             page="housing"
             title="Description"
             description={rentalData.description}
-            li={styles.rentalCollapses__li}
+            container={styles.rentalCollapses__container}
             header={styles.rentalCollapses__header}
           />
           <Collapse
@@ -48,11 +48,11 @@ function Housing() {
             description={rentalData.equipments.map((equipment, index) => (
               <span key={`${equipment}-${index}`}>{equipment}</span>
             ))}
-            li={styles.rentalCollapses__li}
+            container={styles.rentalCollapses__container}
             header={styles.rentalCollapses__header}
             equipments={styles.rentalCollapses__equipments}
           />
-        </ul>
+        </div>
       </section>
     </div>
   ) : (

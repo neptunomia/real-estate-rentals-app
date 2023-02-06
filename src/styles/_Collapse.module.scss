@@ -16,9 +16,8 @@
     padding: 0 100px 0 100px;
   }
 
-  &__li {
+  &__container {
     margin-top: 20px;
-    font-size: 13px;
     &__header {
       padding: 5px 11px 5px 11px;
       display: flex;
@@ -31,8 +30,16 @@
 
       @include tablet {
         margin-top: 30px;
-        font-size: 24px;
         padding: 7px 20px 7px 20px;
+      }
+
+      & h2 {
+        margin: 0;
+        font-size: 13px;
+
+        @include tablet {
+          font-size: 24px;
+        }
       }
 
       & img {

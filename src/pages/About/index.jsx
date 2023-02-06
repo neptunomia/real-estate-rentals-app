@@ -8,7 +8,7 @@ function About() {
     <div>
       <Banner page="about"></Banner>
       <section>
-        <ul className={styles.collapse}>
+        <div className={styles.collapse}>
           {aboutDescriptions.map((collapse) => (
             <Collapse
               key={collapse.id}
@@ -16,7 +16,7 @@ function About() {
               description={collapse.description}
             />
           ))}
-        </ul>
+        </div>
       </section>
     </div>
   );
