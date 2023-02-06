@@ -3,7 +3,7 @@ import leftArrow from '../../assets/icons/arrow_left.png';
 import rightArrow from '../../assets/icons/arrow_right.png';
 import styles from '../../styles/_Gallery.module.scss';
 
-function Slideshow(props) {
+function Gallery(props) {
   const pictures = props.pictures.pictures;
   //console.log(pictures)
 
@@ -51,4 +51,4 @@ function Slideshow(props) {
   );
 }
 
-export default Slideshow;
+export default Gallery;
