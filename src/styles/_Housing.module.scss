@@ -8,7 +8,6 @@
     @include tablet {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
     }
   }
 
@@ -65,13 +64,9 @@
   padding-left: 0;
 
   @include tablet {
-    margin-top: 25px;
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
-  }
-
-  @include desktop {
-    margin-top: 0;
   }
 
   &__li {
@@ -132,6 +127,7 @@
   width: 80%;
 
   @include tablet {
+    margin-bottom: 25px;
     width: 90%;
   }
 
@@ -146,5 +142,6 @@
 
   @include tablet {
     flex-direction: column-reverse;
+    justify-content: flex-end;
   }
 }

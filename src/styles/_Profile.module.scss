@@ -6,6 +6,10 @@
   justify-content: flex-end;
   align-items: center;
 
+  @include tablet {
+    margin-top: 30px;
+  }
+
   &__name {
     width: min-content;
     margin-right: 10.5px;
