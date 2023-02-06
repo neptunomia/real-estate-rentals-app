@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import leftArrow from '../../assets/icons/arrow_left.png';
 import rightArrow from '../../assets/icons/arrow_right.png';
-import styles from '../../styles/_Slideshow.module.scss';
+import styles from '../../styles/_Gallery.module.scss';
 
 function Slideshow(props) {
   const pictures = props.pictures.pictures;

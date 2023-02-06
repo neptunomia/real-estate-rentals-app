@@ -1,5 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom';
-import Slideshow from '../../components/Slideshow';
+import Gallery from '../../components/Gallery';
 import datas from '../../utils/data/index.json';
 import Collapse from '../../components/Collapse';
 import Tag from '../../components/Tag';
@@ -14,7 +14,7 @@ function Housing() {
   //console.log(rentalData);
   return rentalData ? (
     <div>
-      <Slideshow pictures={rentalData} />
+      <Gallery pictures={rentalData} />
       <section className={styles.housing}>
         <div className={styles.housing__container}>
           <div>
