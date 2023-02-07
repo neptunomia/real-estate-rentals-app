@@ -97,9 +97,14 @@
 
     @include tablet {
       margin-top: 0;
-      font: {
-        weight: 500;
-        size: 18px;
+    }
+
+    & h2 {
+      @include tablet {
+        font: {
+          weight: 500;
+          size: 18px;
+        }
       }
     }
 
