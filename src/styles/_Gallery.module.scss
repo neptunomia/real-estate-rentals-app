@@ -58,13 +58,14 @@
   }
 
   &__counter {
-    position: absolute;
-    bottom: 10px;
-    color: white;
-    font-weight: 500;
-    font-size: 12px;
-
+    display: none;
     @include tablet {
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      color: white;
+      font-weight: 500;
+      font-size: 12px;
       font-size: 18px;
       bottom: 25px;
     }
